@@ -1,163 +1,134 @@
-/* --- Global Styles --- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Garamond', serif; /* Sophisticated serif font */
+    background-color: #faf9f6; /* Soft off-white, easier on the eyes */
+    color: #1a1a1a;
     margin: 0;
-    padding: 0;
-    background-color: #0a0a0a; /* Deep charcoal for a premium feel */
-    color: #f0f0f0;
+    text-align: center;
 }
 
-/* --- Header & Title --- */
+/* Luxury accent border at the very top */
+.luxury-border {
+    height: 8px;
+    background: linear-gradient(90deg, #00ff6a, #00a344);
+}
+
 header {
-    background-color: #1a1a1a;
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 2px solid #00ff6a;
+    padding: 60px 20px 20px;
 }
 
 header h1 {
+    font-size: 4em;
+    letter-spacing: 15px;
     margin: 0;
-    font-size: 3.5em;
-    letter-spacing: 8px;
-    color: #00ff6a;
-    text-shadow: 0 0 15px rgba(0, 255, 106, 0.4);
+    font-weight: 300;
 }
 
-/* --- Navigation Bar --- */
-.strain-nav {
-    background-color: #141414;
-    border-bottom: 1px solid #333;
+.subtitle {
+    letter-spacing: 4px;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
 }
 
-.strain-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* Price Banner styling */
+.price-banner {
     display: flex;
     justify-content: center;
-}
-
-.strain-category {
-    position: relative;
-}
-
-.strain-category > a {
-    display: block;
-    padding: 20px 30px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.strain-category > a:hover {
-    color: #00ff6a;
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* --- Dropdown Menu & Product Links --- */
-.dropdown-menu {
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 200px;
-    background-color: #1a1a1a;
-    border: 1px solid #00ff6a;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    display: none; 
-    z-index: 1000;
-}
-
-.strain-category:hover .dropdown-menu {
-    display: block;
-}
-
-.product-link {
-    position: relative;
-}
-
-.product-link a {
-    display: block;
-    padding: 12px 20px;
-    text-decoration: none;
-    color: #ccc;
-    transition: 0.2s;
-}
-
-.product-link a:hover {
-    background-color: #00ff6a;
-    color: #000;
-    font-weight: bold;
-}
-
-/* --- ROLL-OVER IMAGE LOGIC --- */
-.preview-img {
-    position: absolute;
-    left: 105%; /* Pops out to the right */
-    top: -20px;
-    width: 180px;
-    height: auto;
-    border: 2px solid #00ff6a;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.9);
-    
-    /* Animation settings */
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(15px);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    pointer-events: none;
-}
-
-/* Show the image when hovering over the product row */
-.product-link:hover .preview-img {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* --- Price List Section --- */
-.price-list-container {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 30px;
-    background: linear-gradient(145deg, #1a1a1a, #111);
-    border-radius: 15px;
-    text-align: center;
-}
-
-.price-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.price-item {
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
     padding: 20px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    min-width: 120px;
+    background: #1a1a1a;
+    color: white;
 }
 
-.weight {
-    display: block;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-.price {
-    font-size: 2.2em;
+.price-tier {
+    font-size: 1.5em;
     font-weight: bold;
+}
+
+.price-tier span {
+    font-size: 0.6em;
     color: #00ff6a;
+    display: block;
+    letter-spacing: 2px;
+}
+
+.price-divider {
+    width: 1px;
+    height: 30px;
+    background: #444;
+}
+
+/* Menu Grid - Side by Side */
+.menu-grid {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.menu-column {
+    flex: 1;
+}
+
+.menu-column h2 {
+    font-size: 1.2em;
+    letter-spacing: 5px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: #00a344;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+
+.strain-item {
+    padding: 15px 0;
+    position: relative;
+    cursor: crosshair; /* Cool little UI touch */
+}
+
+.strain-name {
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+
+.strain-item:hover .strain-name {
+    letter-spacing: 2px;
+    color: #00ff6a;
+}
+
+/* ROLLOVER IMAGE - The Magic Part */
+.hover-reveal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 250px;
+    border-radius: 50%; /* Circular images look very high-end */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.strain-item:hover .hover-reveal {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 footer {
-    text-align: center;
+    margin-top: 100px;
     padding: 40px;
-    color: #444;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    color: #999;
 }
