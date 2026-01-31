@@ -1,0 +1,37 @@
+/* Ensure the list item is the anchor for the pop-up image */
+.product-link {
+    position: relative;
+}
+
+/* Base style for the preview image (Hidden by default) */
+.preview-img {
+    position: absolute;
+    left: 105%; /* Pops out to the right of the menu */
+    top: -10px;
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    border: 2px solid #00ff6a;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    
+    /* Animation: Hidden and slightly shifted */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none; /* Prevents the image from interfering with mouse movement */
+    z-index: 2000;
+}
+
+/* Reveal the image on hover */
+.product-link:hover .preview-img {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Optional: Add a subtle glow to the text being hovered */
+.product-link:hover a {
+    text-shadow: 0 0 8px #00ff6a;
+    background-color: rgba(0, 255, 106, 0.1);
+}
