@@ -3,85 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercury Cannabis | Curated Flower</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mercury Apothecary Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* RESET & BASICS */
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1A1B41; /* Deep Indigo Background */
+            font-family: 'Montserrat', sans-serif;
+            color: #FFFFFF; /* FORCE WHITE TEXT */
+            text-align: center;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 100px; /* Space for button */
+        }
+
+        /* HEADER */
+        header {
+            border-bottom: 1px solid #D4AF37; /* Gold Line */
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+            color: #D4AF37; /* Gold Text */
+            font-size: 32px;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .slogan {
+            font-size: 14px;
+            color: #E0E0E0; /* Light Grey */
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* MENU SECTIONS */
+        .menu-section {
+            background-color: rgba(255, 255, 255, 0.1); /* Slight white tint */
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #444;
+        }
+
+        h2 {
+            font-family: 'Cinzel Decorative', serif;
+            color: #D4AF37; /* Gold */
+            font-size: 20px;
+            border-bottom: 1px dashed #777;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dotted #555;
+            text-align: left;
+        }
+
+        .item-name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .item-price {
+            color: #D4AF37; /* Gold */
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* FOOTER & BUTTON */
+        .sticky-btn-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1A1B41;
+            padding: 20px;
+            border-top: 1px solid #D4AF37;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+        }
+
+        .order-btn {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #D4AF37; /* Gold Button */
+            color: #1A1B41; /* Dark Text */
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-family: 'Cinzel Decorative', serif;
+        }
+
+        footer {
+            font-size: 12px;
+            color: #888;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="luxury-border"></div>
+    <div class="container">
+        
+        <header>
+            <img src="CosmicHead.png" alt="Mercury Logo" class="logo"> 
+            <h1>Mercury Astoria</h1>
+            <p class="slogan">
+                Sourced directly. Curated collection. Mind expanding. <br>
+                <strong>Since 2012</strong>
+            </p>
+        </header>
 
-    <header>
-        <h1>MERCURY</h1>
-        <p class="subtitle">FINE CANNABIS COLLECTIVE</p>
-    </header>
-
-    <section class="price-banner">
-        <div class="price-tier"><span>1/8</span> $50</div>
-        <div class="price-divider"></div>
-        <div class="price-tier"><span>1/4</span> $90</div>
-        <div class="price-divider"></div>
-        <div class="price-tier"><span>1/2</span> $160</div>
-    </section>
-
-    <main class="menu-grid">
-        <div class="menu-column">
-            <h2>INDICA</h2>
-            <ul class="product-list">
-                <li class="strain-item">
-                    <span class="strain-name">Golden Kush</span>
-                    <img src="https://images.unsplash.com/photo-1536623660355-42ec3de44f95?q=80&w=300" class="hover-reveal">
-                </li>
-                <li class="strain-item">
-                    <span class="strain-name">OG Oreoz</span>
-                    <img src="https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=300" class="hover-reveal">
-                </li>
-                <li class="strain-item">
-                    <span class="strain-name">Donut Breath</span>
-                    <img src="https://images.unsplash.com/photo-1599901860904-17e6ed201b27?q=80&w=300" class="hover-reveal">
-                </li>
-            </ul>
+        <div class="menu-section">
+            <h2>Flower & Rosin</h2>
+            <div class="item-row"><span class="item-name">Mint Jelly</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">Gas Face</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">Jungle Juice</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">Live Rosin Cart (1g)</span> <span class="item-price">Inquire</span></div>
         </div>
 
-        <div class="menu-column">
-            <h2>SATIVA</h2>
-            <ul class="product-list">
-                <li class="strain-item">
-                    <span class="strain-name">Sour Haze</span>
-                    <img src="https://images.unsplash.com/photo-1563172895-03730707e77b?q=80&w=300" class="hover-reveal">
-                </li>
-                <li class="strain-item">
-                    <span class="strain-name">Tangie</span>
-                    <img src="https://images.unsplash.com/photo-1610419263162-8e1f592231eb?q=80&w=300" class="hover-reveal">
-                </li>
-                <li class="strain-item">
-                    <span class="strain-name">NYC D</span>
-                    <img src="https://images.unsplash.com/photo-1618342416806-384379374026?q=80&w=300" class="hover-reveal">
-                </li>
-            </ul>
+        <div class="menu-section">
+            <h2>Mycology</h2>
+            <div class="item-row"><span class="item-name">Enigma</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">White Yeti</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">Microdose Caps</span> <span class="item-price">Inquire</span></div>
         </div>
 
-        <div class="menu-column">
-            <h2>HYBRID</h2>
-            <ul class="product-list">
-                <li class="strain-item">
-                    <span class="strain-name">Falsetto</span>
-                    <img src="https://images.unsplash.com/photo-1556928283-8ee73010398d?q=80&w=300" class="hover-reveal">
-                </li>
-                <li class="strain-item">
-                    <span class="strain-name">White Rhino</span>
-                    <img src="https://images.unsplash.com/photo-1589182397057-b1617b71ad3a?q=80&w=300" class="hover-reveal">
-                </li>
-                <li class="strain-item">
-                    <span class="strain-name">Skittlez Sister</span>
-                    <img src="https://images.unsplash.com/photo-1628155250482-628f2445cc3b?q=80&w=300" class="hover-reveal">
-                </li>
-            </ul>
+        <div class="menu-section">
+            <h2>Edibles & Tinctures</h2>
+            <div class="item-row"><span class="item-name">Zillas Gummies</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">THC Pixie Sticks</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">MCT Tincture</span> <span class="item-price">Inquire</span></div>
         </div>
-    </main>
 
-    <footer>
-        <p>PLEASE CONSUME RESPONSIBLY • MUST BE 21+</p>
-    </footer>
+        <div class="menu-section">
+            <h2>The Vault</h2>
+            <div class="item-row"><span class="item-name">Ketamine / MDMA</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">2CB / Blotter</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">Moon Rocks</span> <span class="item-price">Inquire</span></div>
+            <div class="item-row"><span class="item-name">Cocaine</span> <span class="item-price">Inquire</span></div>
+        </div>
+
+        <footer>
+            &copy; 2026 Mercury Apothecary
+        </footer>
+
+    </div>
+
+    <div class="sticky-btn-container">
+        <a href="https://wa.me/16462623624?text=Hello!%20I%20am%20viewing%20the%20Mercury%20Menu%20and%20interested%20in..." class="order-btn">
+            Place Order
+        </a>
+    </div>
 
 </body>
 </html>
