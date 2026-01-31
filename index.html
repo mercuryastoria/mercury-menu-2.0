@@ -15,7 +15,7 @@
             padding: 0;
             background-color: #1A1B41; /* Deep Indigo Background */
             font-family: 'Montserrat', sans-serif;
-            color: #FFFFFF; /* FORCE WHITE TEXT */
+            color: #FFFFFF; 
             text-align: center;
         }
 
@@ -24,7 +24,7 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-            padding-bottom: 100px; /* Space for button */
+            padding-bottom: 120px; /* Space for sticky button */
         }
 
         /* HEADER */
@@ -50,14 +50,14 @@
 
         .slogan {
             font-size: 14px;
-            color: #E0E0E0; /* Light Grey */
+            color: #E0E0E0; 
             font-style: italic;
             line-height: 1.5;
         }
 
         /* MENU SECTIONS */
         .menu-section {
-            background-color: rgba(255, 255, 255, 0.1); /* Slight white tint */
+            background-color: rgba(255, 255, 255, 0.1); 
             margin-bottom: 20px;
             padding: 15px;
             border-radius: 8px;
@@ -94,6 +94,28 @@
             font-size: 14px;
         }
 
+        /* NEW FLOWER MENU LINK BUTTON */
+        .reserve-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            text-decoration: none;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .reserve-link:hover {
+            background-color: #D4AF37;
+            color: #1A1B41;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
         /* FOOTER & BUTTON */
         .sticky-btn-container {
             position: fixed;
@@ -104,6 +126,7 @@
             padding: 20px;
             border-top: 1px solid #D4AF37;
             box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+            z-index: 100;
         }
 
         .order-btn {
@@ -112,7 +135,7 @@
             max-width: 400px;
             margin: 0 auto;
             background-color: #D4AF37; /* Gold Button */
-            color: #1A1B41; /* Dark Text */
+            color: #1A1B41; 
             padding: 15px;
             font-size: 18px;
             font-weight: bold;
@@ -148,6 +171,8 @@
             <div class="item-row"><span class="item-name">Gas Face</span> <span class="item-price">Inquire</span></div>
             <div class="item-row"><span class="item-name">Jungle Juice</span> <span class="item-price">Inquire</span></div>
             <div class="item-row"><span class="item-name">Live Rosin Cart (1g)</span> <span class="item-price">Inquire</span></div>
+            
+            <a href="flower-menu.html" class="reserve-link">Explore Reserve Flower Collection →</a>
         </div>
 
         <div class="menu-section">
