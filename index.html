@@ -1,96 +1,86 @@
-<link rel="stylesheet" href="styles.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercury Cannabis Menu</title>
+    <title>Mercury Cannabis | Curated Flower</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <div class="luxury-border"></div>
+
     <header>
-        <h1>MERCURY CANNABIS</h1>
+        <h1>MERCURY</h1>
+        <p class="subtitle">FINE CANNABIS COLLECTIVE</p>
     </header>
 
-    <nav class="strain-nav">
-        <ul>
-            <li class="strain-category">
-                <a href="#">INDICA</a>
-                <ul class="dropdown-menu">
-                    <li class="product-link">
-                        <a href="#">Golden Kush</a>
-                        <img src="https://images.unsplash.com/photo-1536623660355-42ec3de44f95?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="Golden Kush">
-                    </li>
-                    <li class="product-link">
-                        <a href="#">OG Oreoz</a>
-                        <img src="https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="OG Oreoz">
-                    </li>
-                    <li class="product-link">
-                        <a href="#">Donut Breath</a>
-                        <img src="https://images.unsplash.com/photo-1599901860904-17e6ed201b27?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="Donut Breath">
-                    </li>
-                </ul>
-            </li>
+    <section class="price-banner">
+        <div class="price-tier"><span>1/8</span> $50</div>
+        <div class="price-divider"></div>
+        <div class="price-tier"><span>1/4</span> $90</div>
+        <div class="price-divider"></div>
+        <div class="price-tier"><span>1/2</span> $160</div>
+    </section>
 
-            <li class="strain-category">
-                <a href="#">SATIVA</a>
-                <ul class="dropdown-menu">
-                    <li class="product-link">
-                        <a href="#">Sour Haze</a>
-                        <img src="https://images.unsplash.com/photo-1563172895-03730707e77b?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="Sour Haze">
-                    </li>
-                    <li class="product-link">
-                        <a href="#">Tangie</a>
-                        <img src="https://images.unsplash.com/photo-1610419263162-8e1f592231eb?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="Tangie">
-                    </li>
-                    <li class="product-link">
-                        <a href="#">NYC D</a>
-                        <img src="https://images.unsplash.com/photo-1618342416806-384379374026?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="NYC D">
-                    </li>
-                </ul>
-            </li>
+    <main class="menu-grid">
+        <div class="menu-column">
+            <h2>INDICA</h2>
+            <ul class="product-list">
+                <li class="strain-item">
+                    <span class="strain-name">Golden Kush</span>
+                    <img src="https://images.unsplash.com/photo-1536623660355-42ec3de44f95?q=80&w=300" class="hover-reveal">
+                </li>
+                <li class="strain-item">
+                    <span class="strain-name">OG Oreoz</span>
+                    <img src="https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=300" class="hover-reveal">
+                </li>
+                <li class="strain-item">
+                    <span class="strain-name">Donut Breath</span>
+                    <img src="https://images.unsplash.com/photo-1599901860904-17e6ed201b27?q=80&w=300" class="hover-reveal">
+                </li>
+            </ul>
+        </div>
 
-            <li class="strain-category">
-                <a href="#">HYBRID</a>
-                <ul class="dropdown-menu">
-                    <li class="product-link">
-                        <a href="#">Falsetto</a>
-                        <img src="https://images.unsplash.com/photo-1556928283-8ee73010398d?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="Falsetto">
-                    </li>
-                    <li class="product-link">
-                        <a href="#">White Rhino</a>
-                        <img src="https://images.unsplash.com/photo-1589182397057-b1617b71ad3a?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="White Rhino">
-                    </li>
-                    <li class="product-link">
-                        <a href="#">Skittlez Sister</a>
-                        <img src="https://images.unsplash.com/photo-1628155250482-628f2445cc3b?q=80&w=200&auto=format&fit=crop" class="preview-img" alt="Skittlez Sister">
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+        <div class="menu-column">
+            <h2>SATIVA</h2>
+            <ul class="product-list">
+                <li class="strain-item">
+                    <span class="strain-name">Sour Haze</span>
+                    <img src="https://images.unsplash.com/photo-1563172895-03730707e77b?q=80&w=300" class="hover-reveal">
+                </li>
+                <li class="strain-item">
+                    <span class="strain-name">Tangie</span>
+                    <img src="https://images.unsplash.com/photo-1610419263162-8e1f592231eb?q=80&w=300" class="hover-reveal">
+                </li>
+                <li class="strain-item">
+                    <span class="strain-name">NYC D</span>
+                    <img src="https://images.unsplash.com/photo-1618342416806-384379374026?q=80&w=300" class="hover-reveal">
+                </li>
+            </ul>
+        </div>
 
-    <main class="price-list-container">
-        <h2>Flower Pricing</h2>
-        <div class="price-grid">
-            <div class="price-item">
-                <span class="weight">1/8</span>
-                <span class="price">$50</span>
-            </div>
-            <div class="price-item">
-                <span class="weight">1/4</span>
-                <span class="price">$90</span>
-            </div>
-            <div class="price-item">
-                <span class="weight">1/2</span>
-                <span class="price">$160</span>
-            </div>
+        <div class="menu-column">
+            <h2>HYBRID</h2>
+            <ul class="product-list">
+                <li class="strain-item">
+                    <span class="strain-name">Falsetto</span>
+                    <img src="https://images.unsplash.com/photo-1556928283-8ee73010398d?q=80&w=300" class="hover-reveal">
+                </li>
+                <li class="strain-item">
+                    <span class="strain-name">White Rhino</span>
+                    <img src="https://images.unsplash.com/photo-1589182397057-b1617b71ad3a?q=80&w=300" class="hover-reveal">
+                </li>
+                <li class="strain-item">
+                    <span class="strain-name">Skittlez Sister</span>
+                    <img src="https://images.unsplash.com/photo-1628155250482-628f2445cc3b?q=80&w=300" class="hover-reveal">
+                </li>
+            </ul>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Mercury Cannabis | Must be 21+ to view.</p>
+        <p>PLEASE CONSUME RESPONSIBLY • MUST BE 21+</p>
     </footer>
 
 </body>
