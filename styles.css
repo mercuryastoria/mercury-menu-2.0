@@ -1,134 +1,155 @@
-body {
-    font-family: 'Garamond', serif; /* Sophisticated serif font */
-    background-color: #faf9f6; /* Soft off-white, easier on the eyes */
-    color: #1a1a1a;
+/* --- Mercury Brand Palette --- */
+:root {
+    --mercury-silver: #C0C0C0;
+    --mercury-green: #00FF7F;
+    --onyx-black: #050505;
+    --slate-gray: #1a1a1a;
+}
+
+body.flower-page {
+    background-color: var(--onyx-black);
+    color: var(--mercury-silver);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
-    text-align: center;
+    overflow-x: hidden;
 }
 
-/* Luxury accent border at the very top */
-.luxury-border {
-    height: 8px;
-    background: linear-gradient(90deg, #00ff6a, #00a344);
-}
-
-header {
-    padding: 60px 20px 20px;
-}
-
-header h1 {
-    font-size: 4em;
-    letter-spacing: 15px;
-    margin: 0;
-    font-weight: 300;
-}
-
-.subtitle {
-    letter-spacing: 4px;
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* Price Banner styling */
-.price-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin: 40px 0;
-    padding: 20px;
-    background: #1a1a1a;
-    color: white;
-}
-
-.price-tier {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.price-tier span {
-    font-size: 0.6em;
-    color: #00ff6a;
-    display: block;
-    letter-spacing: 2px;
-}
-
-.price-divider {
-    width: 1px;
-    height: 30px;
-    background: #444;
-}
-
-/* Menu Grid - Side by Side */
-.menu-grid {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.menu-column {
-    flex: 1;
-}
-
-.menu-column h2 {
-    font-size: 1.2em;
-    letter-spacing: 5px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    color: #00a344;
-}
-
-.product-list {
-    list-style: none;
-    padding: 0;
-}
-
-.strain-item {
-    padding: 15px 0;
-    position: relative;
-    cursor: crosshair; /* Cool little UI touch */
-}
-
-.strain-name {
-    font-size: 1.3em;
-    transition: 0.3s;
-}
-
-.strain-item:hover .strain-name {
-    letter-spacing: 2px;
-    color: #00ff6a;
-}
-
-/* ROLLOVER IMAGE - The Magic Part */
-.hover-reveal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    width: 250px;
-    border-radius: 50%; /* Circular images look very high-end */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+/* Subtle ambient glow in the background */
+.mercury-glow {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% -20%, #00ff7f22, transparent 50%);
     pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
+    z-index: 0;
+}
+
+/* Header & Navigation */
+.luxury-header {
+    padding: 80px 20px 40px;
+    position: relative;
     z-index: 10;
 }
 
-.strain-item:hover .hover-reveal {
+.back-link {
+    color: var(--mercury-green);
+    text-decoration: none;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.back-link:hover { opacity: 1; }
+
+.luxury-header h1 {
+    font-size: 5em;
+    letter-spacing: 25px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 200;
+}
+
+.status-badge {
+    display: inline-block;
+    border: 1px solid var(--mercury-green);
+    padding: 5px 15px;
+    font-size: 0.7em;
+    letter-spacing: 4px;
+    color: var(--mercury-green);
+}
+
+/* Pricing Grid */
+.premium-pricing {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    background: var(--slate-gray);
+    padding: 30px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.tier {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.tier span {
+    display: block;
+    font-size: 0.4em;
+    color: var(--mercury-green);
+    letter-spacing: 3px;
+}
+
+/* Menu Grid */
+.boutique-grid {
+    display: flex;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+    gap: 40px;
+    z-index: 10;
+    position: relative;
+}
+
+.category-card { flex: 1; text-align: left; }
+
+.silver-text {
+    color: var(--mercury-green);
+    font-size: 1.1em;
+    letter-spacing: 6px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+.strain-list { list-style: none; padding: 0; margin-top: 30px; }
+
+.strain-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #111;
+    cursor: pointer;
+    position: relative;
+}
+
+.name {
+    font-size: 1.4em;
+    font-weight: 300;
+    transition: 0.4s;
+}
+
+.strain-item:hover .name {
+    color: white;
+    padding-left: 10px;
+}
+
+/* THE MAGIC PORTAL HOVER */
+.portal-reveal {
+    position: fixed; /* Keeps it relative to the screen for a dramatic effect */
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%) scale(0.9);
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--mercury-green);
+    box-shadow: 0 0 50px rgba(0, 255, 127, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: -1;
+}
+
+.strain-item:hover .portal-reveal {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateY(-50%) scale(1);
 }
 
 footer {
-    margin-top: 100px;
-    padding: 40px;
-    font-size: 0.8em;
-    letter-spacing: 2px;
-    color: #999;
+    padding: 80px;
+    color: #444;
+    letter-spacing: 3px;
+    font-size: 0.7em;
 }
