@@ -1,37 +1,163 @@
-/* Ensure the list item is the anchor for the pop-up image */
+/* --- Global Styles --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* Deep charcoal for a premium feel */
+    color: #f0f0f0;
+}
+
+/* --- Header & Title --- */
+header {
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ff6a;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    letter-spacing: 8px;
+    color: #00ff6a;
+    text-shadow: 0 0 15px rgba(0, 255, 106, 0.4);
+}
+
+/* --- Navigation Bar --- */
+.strain-nav {
+    background-color: #141414;
+    border-bottom: 1px solid #333;
+}
+
+.strain-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.strain-category {
+    position: relative;
+}
+
+.strain-category > a {
+    display: block;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.strain-category > a:hover {
+    color: #00ff6a;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Dropdown Menu & Product Links --- */
+.dropdown-menu {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #1a1a1a;
+    border: 1px solid #00ff6a;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    display: none; 
+    z-index: 1000;
+}
+
+.strain-category:hover .dropdown-menu {
+    display: block;
+}
+
 .product-link {
     position: relative;
 }
 
-/* Base style for the preview image (Hidden by default) */
-.preview-img {
-    position: absolute;
-    left: 105%; /* Pops out to the right of the menu */
-    top: -10px;
-    width: 150px; /* Adjust size as needed */
-    height: auto;
-    border: 2px solid #00ff6a;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    
-    /* Animation: Hidden and slightly shifted */
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(10px);
-    transition: all 0.3s ease-in-out;
-    pointer-events: none; /* Prevents the image from interfering with mouse movement */
-    z-index: 2000;
+.product-link a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.2s;
 }
 
-/* Reveal the image on hover */
+.product-link a:hover {
+    background-color: #00ff6a;
+    color: #000;
+    font-weight: bold;
+}
+
+/* --- ROLL-OVER IMAGE LOGIC --- */
+.preview-img {
+    position: absolute;
+    left: 105%; /* Pops out to the right */
+    top: -20px;
+    width: 180px;
+    height: auto;
+    border: 2px solid #00ff6a;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.9);
+    
+    /* Animation settings */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+/* Show the image when hovering over the product row */
 .product-link:hover .preview-img {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
 }
 
-/* Optional: Add a subtle glow to the text being hovered */
-.product-link:hover a {
-    text-shadow: 0 0 8px #00ff6a;
-    background-color: rgba(0, 255, 106, 0.1);
+/* --- Price List Section --- */
+.price-list-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #1a1a1a, #111);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.price-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.price-item {
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    min-width: 120px;
+}
+
+.weight {
+    display: block;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #00ff6a;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #444;
 }
