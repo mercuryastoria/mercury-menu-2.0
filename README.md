@@ -1,1 +1,1 @@
-# mercury-menu-jan-2026
+# mercury-menu-sept-2026
